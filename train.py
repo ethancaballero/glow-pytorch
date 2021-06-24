@@ -252,7 +252,7 @@ def train(args, model, optimizer):
                     loss_test, log_p, log_det = calc_loss(log_p, logdet, args.img_size, n_bins)
                     image_rec = model_single.reverse(z).cpu().data
                     #import pdb; pdb.set_trace()
-                    image_diff = image - image_rec
+                    image_diff = image.cuda() - image_rec.cuda()
                     rec_mae = (image_diff).abs()
                     rec_mae = torch.flatten(rec_mae, 1, 3).mean(-1)
                     rec_mse = (image_diff) ** 2
