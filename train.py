@@ -269,8 +269,8 @@ def train(args, model, optimizer):
             markersize = 2
             axis[0].plot(np.arange(0, len(rec_mae_cat)), rec_mae_cat.cpu().numpy(), '.', markersize=markersize, color='k')
             axis[1].plot(np.arange(0, len(rec_mse_cat)), rec_mse_cat.cpu().numpy(), '.', markersize=markersize, color='k')
-            axis[0].set_ylabel("reconstuction mae")
-            axis[1].set_ylabel("reconstuction mse")
+            axis[0].set_ylabel("reconstruction_mae")
+            axis[1].set_ylabel("reconstruction_mse")
             
             log_dict = {}
             log_dict.update({'eval_loss': loss_test})
