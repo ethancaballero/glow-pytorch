@@ -178,7 +178,7 @@ def train(args, model, optimizer):
     """
     train_data = TeacherFolder('/Users/ethancaballero/research/scaling_breadth/create_dataset/data_1M/train_teacher_imgs.pth', ll='/Users/ethancaballero/research/scaling_breadth/create_dataset/data_1M/train_teacher_lls.pth', train=True, transform=transform)
     test_data = TeacherFolder('/Users/ethancaballero/research/scaling_breadth/create_dataset/data_1M/val_teacher_imgs.pth', ll='/Users/ethancaballero/research/scaling_breadth/create_dataset/data_1M/val_teacher_lls.pth', train=False, transform=transform)
-    #""""
+    #"""
 
     test_data.dataset = test_data.dataset[:args.test_set_size]
     test_data.lls = test_data.lls[:args.test_set_size]
