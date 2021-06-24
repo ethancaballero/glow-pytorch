@@ -170,12 +170,12 @@ def train(args, model, optimizer):
         ]
     )
 
-    """
-    train_data = TeacherFolder(os.getcwd()+'/teacher_data/train_teacher_imgs.pth', ll=os.getcwd()+'/teacher_data/train_teacher_lls.pth', train=True, transform=transform)
-    test_data  = TeacherFolder(os.getcwd()+'/teacher_data/val_teacher_imgs.pth', ll=os.getcwd()+'/teacher_data/val_teacher_lls.pth', train=False, transform=transform)
+    #"""
+    train_data = TeacherFolder('/home/mila/c/caballero/research/scaling_outer/scaling_laws/minGPT/teacher_data/train_teacher_imgs.pth', ll='/home/mila/c/caballero/research/scaling_outer/scaling_laws/minGPT/teacher_data/train_teacher_lls.pth', train=True, transform=transform)
+    test_data  = TeacherFolder('/home/mila/c/caballero/research/scaling_outer/scaling_laws/minGPT/teacher_data/val_teacher_imgs.pth', ll='/home/mila/c/caballero/research/scaling_outer/scaling_laws/minGPT/teacher_data/val_teacher_lls.pth', train=False, transform=transform)
     #"""
 
-    #"""
+    """
     train_data = TeacherFolder('/Users/ethancaballero/research/scaling_breadth/create_dataset/data_1M/train_teacher_imgs.pth', ll='/Users/ethancaballero/research/scaling_breadth/create_dataset/data_1M/train_teacher_lls.pth', train=True, transform=transform)
     test_data = TeacherFolder('/Users/ethancaballero/research/scaling_breadth/create_dataset/data_1M/val_teacher_imgs.pth', ll='/Users/ethancaballero/research/scaling_breadth/create_dataset/data_1M/val_teacher_lls.pth', train=False, transform=transform)
     #""""
