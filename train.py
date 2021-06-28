@@ -154,7 +154,7 @@ def calc_loss(log_p, logdet, image_size, n_bins):
 
 
 def train(args, model, optimizer):
-    dataset = iter(sample_data(args.path, args.batch_size_train, args.img_size))
+    #dataset = iter(sample_data(args.path, args.batch_size_train, args.img_size))
     n_bins = 2.0 ** args.n_bits
 
     z_sample = []
